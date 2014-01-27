@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* 
+Shorthand:
+
+margin: 40px; all 4 sides
+margin: 40px auto; top/bottom right/left
+margin: 40px auto 0; top right/left bottom
+margin: 40px 30px 5px 10px; top, right, bottom, left 
+
+Start at the top then continue clockwise around the box 
+
+Units of Measurement:
+
+Width = %
+Height = rem 
+Type = rem
+Graphics = px (eg: border, images) 
+
+Reminder: The child determines the height of the parent element  
+*/
+
+
+/* contol the size of the viewport */ 
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+* { /* controls the padding so it draws on the box interior */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+    /* controls the zoom on mobile */
+    
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+    
+     /* controls the default font size */ /*100% = 16px = 1rem */
+    font-size: 100%;
+    font-family: Georgia, Times, serif; 
+   
+}
+
+img { /* images are responsive */
+	width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.masthead {
+    background-color: maroon;
+    overflow: hidden 
+}
+
+.logo {
+    height: 4.5rem;
+    width: auto; 
+    margin: .5rem 5%;
+}
+
+article {
+    margin: 0;
+    padding: 0 5%; 
+    overflow: hidden; /* closes the gap. forces parent to wrap around its child */ 
+}
+
+h1 {
+    margin: 1.5rem 0; 
+    font-size: 5rem; 
+    line-height:4.5rem; 
+} 
+
+h1 + p {
+    font-size:1.25rem;
+    font-weight:bold; 
+}
+
+p {
+    line-height:1.5rem;
+    margin:0 0 1.5rem; 
+}
+
+figure {
+    margin: 0 auto 1.5rem; /* auto in case we want smaller */ 
+    width: 100%; /* size can be smaller, but not larger than 100% */
+} 
+
+figcaption {
+    margin: .5rem 0 0;
+    font-size:.75rem;
+}
+
+footer {
+    background-color:brown; 
+    overflow: hidden; 
+}
+
+footer p {
+    margin: .5rem 5% 5rem; 
+    color: white;
+    font-size: .75rem; 
+} 
+
+footer a {
+    color: white; 
+} 
